@@ -8,7 +8,6 @@ import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,19 +26,12 @@ import com.paypal.api.payments.Transaction;
 import com.paypal.base.rest.APIContext;
 import com.paypal.base.rest.PayPalRESTException;
 
-import edu.manjiltamang.paypal.service.URLLocation;
+import edu.manjiltamang.paypal.utils.URLLocation;
 
 
 @Controller
 @RequestMapping("/paypal")
 public class PaypalController {	
-	@Value("${paypal.mode}")
-	private String mode;
-	@Value("${paypal.client.app}")
-	private String clientID;
-	@Value("${paypal.client.secret}")
-	private String clientSecret;
-	
 	@Autowired
 	private APIContext apiContext;
 	

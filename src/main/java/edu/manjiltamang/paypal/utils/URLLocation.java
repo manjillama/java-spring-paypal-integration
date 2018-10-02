@@ -1,4 +1,4 @@
-package edu.manjiltamang.paypal.service;
+package edu.manjiltamang.paypal.utils;
 
 import javax.servlet.http.HttpServletRequest;
 
